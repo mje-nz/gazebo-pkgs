@@ -1,6 +1,6 @@
 # the topic onto which to continuously publish
 # the map.
-publish_map_topic: "/gazebo/map"
+publish_map_topic: "/gazebo_map_publisher/map"
 
 # frequency to publish the map
 map_pub_frequency: 1
@@ -18,5 +18,5 @@ request_map_service: "/dynamic_map"
 map_frame_id: "/map"
 
 # the name of the robot in Gazebo
-robot_name: "robot"
+robot_name: "mobile_base"
 
