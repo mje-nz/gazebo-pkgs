@@ -14,8 +14,6 @@ find_package(
   std_msgs
   nav_msgs
   gazebo_ros
-  object_msgs
-  object_msgs_tools
   eigen_conversions
 )
 
@@ -39,7 +37,7 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES gazebo_state_plugins gazebo_map_publisher
   CATKIN_DEPENDS geometry_msgs roscpp shape_msgs std_msgs nav_msgs gazebo_world_plugin_loader
-        gazebo_ros object_msgs object_msgs_tools eigen_conversions
+        gazebo_ros eigen_conversions
   DEPENDS gazebo
 )
 
@@ -56,35 +54,19 @@ include_directories(
   ${GAZEBO_INCLUDE_DIRS}
 )
 
-## Declare a cpp library
-add_library(gazebo_object_info
-   src/GazeboObjectInfo.cpp
-)
-
 add_library(gazebo_map_publisher
    src/GazeboMapPublisher.cpp
 )
 
 
-## Declare a cpp executable
-add_executable(gazebo_request_object_info test/object_info_request.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-add_dependencies(gazebo_request_object_info ${catkin_EXPORTED_TARGETS})
-add_dependencies(gazebo_object_info ${catkin_EXPORTED_TARGETS})
 add_dependencies(gazebo_map_publisher ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(gazebo_object_info
-   ${GAZEBO_LIBRARIES}
-   ${catkin_LIBRARIES}
-)
 target_link_libraries(gazebo_map_publisher
    ${GAZEBO_LIBRARIES}
-   ${catkin_LIBRARIES}
-)
-target_link_libraries(gazebo_request_object_info
    ${catkin_LIBRARIES}
 )
 
@@ -104,7 +86,7 @@ target_link_libraries(gazebo_request_object_info
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS gazebo_object_info gazebo_map_publisher gazebo_request_object_info
+install(TARGETS gazebo_map_publisher
    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

@@ -8,7 +8,7 @@ world_name: "default"
 
 # names and filenames of plugins to load
 world_plugins:
-    - name: gazebo_object_info
-      file: libgazebo_object_info.so
-    # - name: gazebo_map_publisher
-    #  file: libgazebo_map_publisher.so
+    #- name: gazebo_object_info
+    #  file: libgazebo_object_info.so
+    - name: gazebo_map_publisher
+      file: libgazebo_map_publisher.so
