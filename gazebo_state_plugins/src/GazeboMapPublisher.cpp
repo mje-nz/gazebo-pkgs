@@ -15,12 +15,12 @@
 //publishing rate
 #define DEFAULT_MAP_PUB_FREQ "1" 
 
-#define MAP_OFFSET_X -10
-#define MAP_OFFSET_Y -10
-#define MAP_LEN_X 20
-#define MAP_LEN_Y 20
+#define MAP_OFFSET_X -16
+#define MAP_OFFSET_Y -16
+#define MAP_LEN_X 32
+#define MAP_LEN_Y 32
 //map resolution (m/cell)
-#define MAP_RESOLUTION 0.1
+#define MAP_RESOLUTION 0.01
 
 //height of obstacles to consider for generating the map
 #define MAP_HEIGHT 1.0
