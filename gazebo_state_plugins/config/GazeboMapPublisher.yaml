@@ -1,6 +1,6 @@
 # the topic onto which to continuously publish
 # the map.
-publish_map_topic: "/gazebo_map_publisher/map"
+publish_map_topic: "/map"
 
 # frequency to publish the map
 map_pub_frequency: 1
@@ -12,7 +12,7 @@ map_metadata_topic: "/map_metadata"
 
 # topic onto which to provide a service to
 # request the map.
-request_map_service: "/dynamic_map"
+request_map_service: "/static_map"
 
 # The frame ID to assign to the map    
 map_frame_id: "/map"
