@@ -278,7 +278,10 @@ nav_msgs::MapMetaData GazeboMapPublisher::getMetaData() {
     mdata.origin.position.x=map_offset_x;
     mdata.origin.position.y=map_offset_y;
     mdata.origin.position.z=0;
-    mdata.origin.orientation.w=0;
+    mdata.origin.orientation.x=0;
+    mdata.origin.orientation.y=0;
+    mdata.origin.orientation.z=0;
+    mdata.origin.orientation.w=1;
     return mdata;
 }
 
