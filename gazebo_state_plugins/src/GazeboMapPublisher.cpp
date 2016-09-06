@@ -288,6 +288,7 @@ nav_msgs::MapMetaData GazeboMapPublisher::getMetaData() {
 
 nav_msgs::OccupancyGrid GazeboMapPublisher::getMap() {
     nav_msgs::OccupancyGrid map;
+	//TODO: Cache
 
 #if 1
     CollisionMapRequest r=getCollisionRequest();    
